@@ -31,6 +31,11 @@ app.use(
 // 	res.header('Access-Control-Allow-Origin', '*');
 // 	next();
 //   });
+
+app.get('/health', (req, res) => {
+  res.json({ status: "ok" });
+});
+
 app.use(
 	fileUpload({
 		useTempFiles:true,
